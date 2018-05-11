@@ -41,7 +41,13 @@ basic.forever(() => {
             . . . . .
             `)
     }
-    if (onPin0 == true && onPin1 == true && onPin2 == true && melody == true) {
+    if ((onPin0 == true && onPin1 == true && onPin2 == true && melody == true) ||
+        (onPin0 == true && onPin1 == false && onPin2 == false && melody == true) ||
+        (onPin0 == true && onPin1 == true && onPin2 == false && melody == true) ||
+        (onPin0 == true && onPin1 == false && onPin2 == true && melody == true) ||
+        (onPin0 == false && onPin1 == true && onPin2 == true && melody == true) ||
+        (onPin0 == false && onPin1 == true && onPin2 == false && melody == true) ||
+        (onPin0 == false && onPin1 == false && onPin2 == true && melody == true)) {
         basic.showIcon(IconNames.Sad)
         music.beginMelody(music.builtInMelody(Melodies.Wawawawaa), MelodyOptions.Once)
         reset()
