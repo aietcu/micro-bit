@@ -59,9 +59,9 @@ radio.onDataPacketReceived(({ receivedString: name, receivedNumber: value }) => 
 })
 input.onButtonPressed(Button.A, () => {
     Pixel.setPixelColor(0, neopixel.colors(NeoPixelColors.Indigo))
-    Pixel.setPixelColor(1, neopixel.colors(NeoPixelColors.White))
+    Pixel.setPixelColor(1, neopixel.colors(NeoPixelColors.Purple))
     Pixel.setPixelColor(2, neopixel.colors(NeoPixelColors.Indigo))
-    Pixel.setPixelColor(3, neopixel.colors(NeoPixelColors.White))
+    Pixel.setPixelColor(3, neopixel.colors(NeoPixelColors.Purple))
     Pixel.setPixelColor(4, neopixel.colors(NeoPixelColors.Black))
 })
 input.onButtonPressed(Button.B, () => {
