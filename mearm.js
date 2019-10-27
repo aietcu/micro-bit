@@ -11,10 +11,12 @@ input.onButtonPressed(Button.A, function () {
     mearm.openGrip()
 })
 input.onButtonPressed(Button.AB, function () {
-    reset22()
+    //reset22()
+    speed = Math.randomRange(1, 10)
 })
 let speed: number
 speed = 2
+
 reset22()
 basic.forever(function () {
     if (mearm.joystick(Joystick.LeftJoyX) < 0 && (mearm.joystick(Joystick.LeftJoyY) <= 5 || mearm.joystick(Joystick.LeftJoyY) >= 5)) {
