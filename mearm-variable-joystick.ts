@@ -89,7 +89,7 @@ basic.forever(function () {
     let rightJoyPosition = new Point(rightJoyX, rightJoyY);
     // serial.writeLine(">> created right joystick point:" + rightJoyPosition);
 
-    c  function () {
+    control.inBackground(function () {
         if (Quadrant.BottomLeftX.containsPoint(leftJoyPosition) ||
             Quadrant.TopLeftX.containsPoint(leftJoyPosition) ||
             Quadrant.TopRightX.containsPoint(leftJoyPosition) ||
