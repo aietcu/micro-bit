@@ -73,8 +73,8 @@ class Quadrant {
     static readonly TopLeftX: Pie = new Pie(new Point(0, 0), new Point(-100, 0), new Point(-100, -100));
     static readonly TopLeftY: Pie = new Pie(new Point(0, 0), new Point(-100, -100), new Point(0, -100));
 }
-function getSpeed(joystick: Joystick): number {
-    return mearm.joystick(joystick) / 7;
+function getSpeed(joystick: Joystick, ratio: number = 10): number {
+    return mearm.joystick(joystick) / ratio;
 }
 
 reset22();
@@ -103,7 +103,7 @@ basic.forever(function () {
             Quadrant.TopLeftX.containsPoint(rightJoyPosition) ||
             Quadrant.TopRightX.containsPoint(rightJoyPosition) ||
             Quadrant.BottomRightX.containsPoint(rightJoyPosition)) {
-            mearm.moveByAngle(MearmServo.Grip, getSpeed(Joystick.RightJoyX));
+            mearm.moveByAngle(MearmServo.Grip, getSpeed(Joystick.RightJoyX, 14));
         } else {
             mearm.moveByAngle(MearmServo.Left, getSpeed(Joystick.RightJoyY));
         }
